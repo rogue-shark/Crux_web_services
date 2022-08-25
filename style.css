@@ -7,10 +7,10 @@
     --font-logo: 'Silkscreen', cursive;
 
     --bgc-body: whitesmoke;
-    --bgc-nav:;
+    /* --bgc-nav:  ; */
     --bgc-foot: #100E1D;
-    --bgc-nav : #;
-    --bgc-toggle: #;
+    --bgc-nav : white;
+    --bgc-input: #e3f4f9;
     
     --bgc-hl-blue: #2D9CDB;
 
@@ -59,24 +59,27 @@ span{
 }
 
 .subscribe input{
+    width: 70%;
     padding: 1em 3em;
     border-radius: var(--bdr-sub-btn);
     border: none;
-    background-color: #f2f2f2;
+    background-color: var(--bgc-input);
     font-family: var(--font-main);
     font-weight: 500;
 }
 
 
 input::placeholder{
+    text-align: start;
     position: relative;
     left: -1.5em;
     opacity: var(--elem-opacity);
 }
 
 .subscribe button{
+
    position: relative;
-   right: 4.5em;
+   right: 4rem;
    padding: .5em 1em;
    border: none;
    border-radius: var(--bdr-sub-btn);
@@ -124,7 +127,7 @@ nav{
 .nav-area{
     padding: .5em;
     display: none;
-    background-color: white;
+    background-color: var(--bgc-nav);
     border-radius: 10px;
     box-shadow: var(--box-shadow);
 }
@@ -147,13 +150,13 @@ nav{
     width: 100%;
     padding: .4em 0;
     margin: .4em 0;
-    background-color: rgb(25, 23, 23);
+    background-color: var(--bgc-foot);
     border-radius: 5px;
     transition: all .4s;
 }
 .nav-item:hover,
 .nav-item:focus{
-    background-color: rgb(72, 71, 71);
+    background-color: rgb(44, 4, 78);
 }
 
 /* ------------------------------------------------ */
@@ -209,8 +212,12 @@ footer img{
     margin: .2em;
 }
 
+.footer-nav{
+    padding-top: 3em;
+}
+
 footer div div{
-    padding: 2em 0;
+    padding: 1em 0;
 }
 
 @media(min-width: 725px){
@@ -238,21 +245,23 @@ footer div div{
    
    .nav-area ul{
         display: flex;    
+      
    } 
 
    .nav-item{
-        /* padding: .4em .1em; */
         margin: 0 .3em ;
         background-color: var(--bgc-body);
    }
  
 
    .nav-item a{
+        display: inline-block;
+        width: 100%;
         color: black;
-        transition: all 0s;
    }
 
-   .nav-item a:hover{
+   .nav-item a:hover,
+   .nav-item a:focus{
         color: white;
     }
 
@@ -311,5 +320,13 @@ footer div div{
     
     footer .connect img{
         border-radius: 0;
+    }
+
+    .subscribe-footer{
+        flex-grow: .3;
+    }
+
+    .footer-link{
+        margin: .5em 0;
     }
 }
