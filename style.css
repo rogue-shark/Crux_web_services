@@ -40,6 +40,7 @@ img{
 
 .row-2{
     display: flex;
+    align-items: center;
 }
 
 ul, a{
@@ -148,7 +149,7 @@ nav{
     margin: .4em 0;
     background-color: rgb(25, 23, 23);
     border-radius: 5px;
-    transition: all .5s;
+    transition: all .4s;
 }
 .nav-item:hover,
 .nav-item:focus{
@@ -169,9 +170,13 @@ nav{
 .card{
     margin: 1em 0;
     padding: 2em;
-    box-shadow: var(--box-shadow);
+    
     /* border: 1px solid yellow; */
     border-radius: 24px;
+}
+.card:hover,
+.card:focus{
+    box-shadow: var(--box-shadow);
 }
 
 .my-team{
@@ -187,8 +192,8 @@ nav{
 }
 
 .about-me img{
-     width: 100px;
-     height: 100px;
+     width: 80px;
+     height: 80px;
      margin: 0 2em 0 0;
 }
 
@@ -208,12 +213,103 @@ footer div div{
     padding: 2em 0;
 }
 
-@media(min-width: 600px){
-    .container-1{
-        max-width: 1000px;
-    }
+@media(min-width: 725px){
+   
     .row-1{
         display: flex;
         gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+/* -----------------navigation---------------------- */
+   
+    .nav-area{
+        flex-grow: .5;
+        display: flex;
+        background-color: var(--bgc-body);
+        box-shadow: none;
+        transition: all .4s;
+   } 
+    .nav-area:hover{   
+        color: white;
+        box-shadow: var(--box-shadow);
+   } 
+   
+   .nav-area ul{
+        display: flex;    
+   } 
+
+   .nav-item{
+        /* padding: .4em .1em; */
+        margin: 0 .3em ;
+        background-color: var(--bgc-body);
+   }
+ 
+
+   .nav-item a{
+        color: black;
+        transition: all 0s;
+   }
+
+   .nav-item a:hover{
+        color: white;
+    }
+
+   .toggle-btn{
+        display: none;
+   }
+
+/* ---------------containers-------------------- */
+    .container-1{
+        max-width: 1200px;
+    }
+
+    .container-2{
+        width: 60%;
+        margin: 2em auto;
+    }
+    .hero-content{
+        margin-bottom: 4em;
+    }
+    .container-3{
+        width: 90%;
+        margin: 0 auto;
+    }
+/* -----------------sections-------------------- */
+    .section-3 .project-card{
+        margin-top: 8em;
+    }
+    .section-3 .project-card div:last-of-type{
+        position: relative;
+        bottom: 8em;
+    }
+
+    .section-3 p{
+        position: absolute;
+       bottom: -6em;
+       right: 2em;
+        color: var(--bgc-hl-blue);
+    }
+    
+    .section-4 div{
+        align-self: center;
+        margin: 2em 0;
+        width: 100%;
+    }
+    .section-4 span{
+        color: red;
+    }
+
+    .section-5{
+        width: 80%;
+        margin-bottom: 7em;
+    }
+    .section-5 h2{
+        font-weight: 500;
+    }
+    
+    footer .connect img{
+        border-radius: 0;
     }
 }
